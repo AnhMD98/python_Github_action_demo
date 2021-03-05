@@ -104,7 +104,6 @@ jobs:
     # Only run this job if "deploy-to-product" has ended successfully
     needs:
       - deploy-to-product
-      - build
     runs-on: ubuntu-latest
     steps:
       - name: demo
@@ -116,7 +115,7 @@ jobs:
   test-cicd:
     # Only run this job if "test-flow" has ended successfully
     needs:
-      - deploy-to-test
+      - test-flow
     runs-on: ubuntu-latest
     steps:
       - name: demo
