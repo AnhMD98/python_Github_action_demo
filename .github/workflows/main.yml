@@ -98,3 +98,17 @@ jobs:
         run: |
           (eb use test-environment && eb status test-environment && eb deploy) || eb create test-environment
 
+deploy-to-product:
+    # Only run this job if "build" has ended successfully
+    needs:
+      - deploy-to-test
+      
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Set up cache for pip
+      - name: demo
+        run: |
+          echo "nothing"
+
