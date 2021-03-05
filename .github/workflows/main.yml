@@ -116,7 +116,6 @@ jobs:
   test-cicd:
     # Only run this job if "test-flow" has ended successfully
     needs:
-      - test-flow
       - deploy-to-test
     runs-on: ubuntu-latest
     steps:
