@@ -101,7 +101,7 @@ jobs:
   deploy-to-product:
     # Only run this job if "build" has ended successfully
     needs:
-      - deploy-to-test
+      - build
       
     runs-on: ubuntu-latest
 
