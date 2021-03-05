@@ -104,7 +104,7 @@ jobs:
     # Only run this job if "deploy-to-product" has ended successfully
     needs:
       - deploy-to-product
-      - build
+      - deploy-to-test
     runs-on: ubuntu-latest
     steps:
       - name: demo
