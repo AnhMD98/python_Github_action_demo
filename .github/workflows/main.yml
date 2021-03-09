@@ -92,7 +92,7 @@ jobs:
     # Only run this job if "build" has ended successfully
     needs:
       - build
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: demo
         run: |
